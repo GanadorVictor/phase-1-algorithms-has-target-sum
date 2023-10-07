@@ -1,5 +1,11 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
 }
 
 /* 
@@ -8,6 +14,13 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Pseudocode:
+
+  1. Iterate through each element in the array (first loop).
+  2. For each element, iterate through the remaining elements in the array (second loop).
+  3. Check if the sum of the current pair equals the target.
+  4. If a pair is found, return true.
+  5. If no pair is found after both loops, return false.
 */
 
 /*
